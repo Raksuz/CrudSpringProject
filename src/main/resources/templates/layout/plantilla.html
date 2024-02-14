@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Inicio</title>
+</head>
+
+<body>
+	<header th:fragment="header">
+        <h1 th:text="#{plantilla.titulo}"></h1>
+    </header>
+
+    <footer th:fragment="footer">
+    <div>
+        <p>[[#{plantilla.footer}]] <a href="" target="_blank">Carlos Lopez</a></p>
+        <form method="POST" th:action="@{/logout}">
+        <a href="#" onclick="this.parentNode.submit();">Logout</a>
+        </form >
+        </div>
+    </footer>
+</body>
+
+</html>
